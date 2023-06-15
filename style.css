@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.score--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score--score {
+    padding: 30px;
+    font-size: 60px;
+    font-family: monospace;
+}
+
+.score--refresh {
+    border-radius: 15px;
+    width: fit-content;
+    background-color: #333333;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.creator--container {
+    display: flex;
+    flex-direction: column;
+}
+
+.creator--container select,
+.creator--container option,
+.creator--container input {
+    text-decoration: none;
+    outline: transparent;
+    border: transparent;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 30px;
+    width: 70vw;
+}
+
+.creator--error {
+    color: #ff8888;
+}
+
+.question--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-width: 70vw;
+    width: 70vw;
+}
+
+.question--header {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.question--category {
+    font-size: 25px;
+}
+
+.question--difficulty {
+    font-size: 15px;
+    margin: 10px;
+}
+
+.question--question {
+    font-size: 30px;
+}
+
+.question--possible-answers {
+    display: grid;
+    place-items: center;
+    grid-template-areas: "q1 q2";
+    margin-top: 20px;
+    gap: 20px;
+    /* width: 100%; */
+}
+
+.question--possible-answers:nth-child(1) {
+    grid-area: q1;
+}
+.question--possible-answers:nth-child(2) {
+    grid-area: q2;
+}
+
+.question--selected {
+    box-shadow: 0 0 0 2px white;
+}
+
+.question--button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.question--possible-answer {
+    width: 30vw;
+    min-width: 100px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.question--correct {
+    background-color: #004300;
+}
+.question--incorrect {
+    background-color: #590000;
+}
+
+.question--button:hover {
+    background-color: #474747;
+}
+
+.question--check,
+.question--next {
+    margin-top: 20px;
+    width: 40%;
+    border-radius: 100em;
+    height: 40px;
+}
+
+.question--next {
+    display: none;
+}
